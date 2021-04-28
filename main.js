@@ -15,12 +15,14 @@ const displayDate = () => {
  
 
 // Write a JavaScript program to convert a number to a string.
-
-
+const numToString = (num) => {
+  return num.toString();
+}
 
 // Write a JavaScript program to convert a string to the number.
-
-
+const stringToNum = (str) => {
+  return Number(str)
+}
 
 // Write a JavaScript program that takes in different datatypes and prints out whether they are a:
   // * Boolean
@@ -29,22 +31,44 @@ const displayDate = () => {
   // * Number
   // * NaN
   // * String
-  
+console.log(typeof true)
+console.log(typeof null)
+console.log(typeof undefined)
+console.log(typeof 100)
+console.log(typeof NaN)
+console.log(typeof 'puppies')
 
   
 // Write a JavaScript program that adds 2 numbers together.
-
-
+const addTwoNumbers = (num1, num2) => {
+  return num1 + num2;
+}
+console.log(addTwoNumbers(4, 6))
 
 // Write a JavaScript program that runs only when 2 things are true.
+const variableA = 50;
+const variableB = 90;
 
-
+if (variableA && variableB) {
+  console.log("Both are truthy")
+};
 
 // Write a JavaScript program that runs when 1 of 2 things are true.
+const variableC = 50;
+const variableD = 0;
+
+if (variableC || variableD) {
+  console.log("One is truthy")
+};
 
 
+// Write a JavaScript program that runs when both things are not true.
+const variableE = 50;
+const variableF = 0;
 
-// Write a JavaScript program that runs when both things are not true.  
+if (variableE !== variableF) {
+  console.log("Neither is truthy")
+}; 
 
 // ***************************
 //         PART TWO
