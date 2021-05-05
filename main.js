@@ -19,9 +19,23 @@ const numToString = (num) => {
   return num.toString();
 }
 
+const convertToString = () => {
+  const num = document.getElementById("number").value;
+  const newString = numToString(num);
+
+  document.getElementById("display-string").innerHTML = typeof(newString) + ': ' + newString;
+}
+
 // Write a JavaScript program to convert a string to the number.
 const stringToNum = (str) => {
-  return Number(str)
+  return parseInt(str);
+}
+
+const convertToNum = () => {
+  const str = document.getElementById("text").value;
+  const newNum = stringToNum(str);
+
+  document.getElementById("display-num").innerHTML = typeof(newNum) + ': ' + newNum;
 }
 
 // Write a JavaScript program that takes in different datatypes and prints out whether they are a:
@@ -31,44 +45,85 @@ const stringToNum = (str) => {
   // * Number
   // * NaN
   // * String
-console.log(typeof true)
-console.log(typeof null)
-console.log(typeof undefined)
-console.log(typeof 100)
-console.log(typeof NaN)
-console.log(typeof 'puppies')
+const getType = (value) => {
+  if (value === "true" || value === "false") {
+    return 'boolean';
+  } else if (!Number.isNaN(Number(value))) {
+    return 'number'; 
+  } else {
+    return typeof(value)
+  }
+}
 
+const displayType = () => {
+  const data = document.getElementById("data").value;
+  const type = getType(data);
+
+  document.getElementById("display-type").innerHTML = type;
+}
   
 // Write a JavaScript program that adds 2 numbers together.
 const addTwoNumbers = (num1, num2) => {
   return num1 + num2;
 }
-console.log(addTwoNumbers(4, 6))
+
+const calculateSum = () => {
+  const num1 = document.getElementById("num1").valueAsNumber;
+  const num2 = document.getElementById("num2").valueAsNumber;
+  const sum = addTwoNumbers(num1, num2);
+  
+  document.getElementById("display-sum").innerHTML = sum;
+}
 
 // Write a JavaScript program that runs only when 2 things are true.
-const variableA = 50;
-const variableB = 90;
+const compareTruths = (variableA, variableB) => {
+  if (variableA && variableB) {
+    return "Both are truthy!";
+  } else {
+    return false;
+  }
+}
 
-if (variableA && variableB) {
-  console.log("Both are truthy")
-};
+const checkTwoTruths = () => {
+  const variableA = document.getElementById("variableA").value;
+  const variableB = document.getElementById("variableB").value;
+  const twoTruths = compareTruths(variableA, variableB);
+
+  document.getElementById("display-2-true").innerHTML = twoTruths;
+}
 
 // Write a JavaScript program that runs when 1 of 2 things are true.
-const variableC = 50;
-const variableD = 0;
+const findOneTruth = (variableC, variableD) => {
+  if (variableC || variableD) {
+    return("One is truthy!")
+  } else {
+    return false;
+  }
+}
 
-if (variableC || variableD) {
-  console.log("One is truthy")
-};
+const checkOneTruth = () => {
+  const variableC = document.getElementById("variableC").value;
+  const variableD = document.getElementById("variableD").value;
+  const oneTruth = findOneTruth(variableC, variableD);
+
+  document.getElementById("display-1-true").innerHTML = oneTruth;
+}
 
 
 // Write a JavaScript program that runs when both things are not true.
-const variableE = 50;
-const variableF = 0;
+const findFalse = (variableE, variableF) => {
+  if (!variableE && !variableF) {
+    return("Both are falsey!")
+  };
+}
 
-if (variableE !== variableF) {
-  console.log("Neither is truthy")
-}; 
+const checkFalse = () => {
+  const variableE = document.getElementById("variableE").value;
+  const variableF = document.getElementById("variableF").value;
+  const twoFalse = findFalse(variableE, variableF);
+
+  document.getElementById("display-false").innerHTML = twoFalse;
+}
 
 // ***************************
 //         PART TWO

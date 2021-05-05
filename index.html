@@ -8,12 +8,44 @@
   <body>
     <h1>Hello World!</h1>
     <hr/>
+    <!-- Display Date -->
     <div id="display-element"></div>
     <button onclick="displayDate()">Display Date & Time</button>
     <hr/>
-    <hr/>
+    <!-- Number to String -->
     <div id="display-string"></div>
-    <button onclick="numToString()">Convert a Number to a String</button>
+    <input type="number" id="number" name="number" placeholder="Your Number"><br>
+    <button onclick="convertToString()">Convert Number to String</button>
+    <hr/>
+    <!-- String to Number -->
+    <div id="display-num"></div>
+    <input type="text" id="text" name="text" placeholder="Your String"><br>
+    <button onclick="convertToNum()">Convert String to Number</button>
+    <hr/>
+    <!-- Type of Data -->
+    <div id="display-type"></div>
+    <input id="data" name="data" placeholder="Your Data"><br>
+    <button onclick="displayType()">Check the Type of Data</button>
+    <hr/>
+    <!-- Add Two Numbers -->
+    <div id="display-sum"></div>
+    <input type="number" id="num1" name="num1" placeholder="1st Number"><input type="number" id="num2" name="num2" placeholder="2nd Number"><br>
+    <button onclick="calculateSum()">Add Two Numbers</button>
+    <hr/>
+    <!-- Two True -->
+    <div id="display-2-true"></div>
+    <input id="variableA" name="variableA" placeholder="1st Variable"><input id="variableB" name="variableB" placeholder="2nd Variable"><br>
+    <button onclick="checkTwoTruths()">Check if BOTH Variables are True</button>
+    <hr/>
+    <!-- One True -->
+    <div id="display-1-true"></div>
+    <input id="variableC" name="variableC" placeholder="1st Variable"><input id="variableD" name="variableD" placeholder="2nd Variable"><br>
+    <button onclick="checkOneTruth()">Check if ONE Variable is True</button>
+    <hr/>
+    <!-- Zero True -->
+    <div id="display-false"></div>
+    <input id="variableE" name="variableE" placeholder="1st Variable"><input id="variableF" name="variableF" placeholder="2nd Variable"><br>
+    <button onclick="checkFalse()">Check if NEITHER Variable is True</button>
     <hr/>
   </body>
 </html>
